@@ -185,7 +185,7 @@
           source="http:/www.eclipse.org/oomph/targlets/TargetDefinitionGenerator">
         <detail
             key="location">
-          <value>${git.clone.slizaa.location}/releng/org.slizaa.neo4j.opencypher.target/org.slizaa.neo4j.opencypher.target.target-gen</value>
+          <value>${git.clone.slizaaopencypher.location}/releng/org.slizaa.neo4j.opencypher.target/org.slizaa.neo4j.opencypher.target.target-gen</value>
         </detail>
         <detail
             key="extraUnits">

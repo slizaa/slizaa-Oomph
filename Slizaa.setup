@@ -342,23 +342,6 @@
       </repositoryList>
     </targlet>
     <targlet
-        name="Code Affine Theme"
-        activeRepositoryList="Code Affine Theme">
-      <requirement
-          name="com.codeaffine.eclipse.swt.feature.feature.group"
-          versionRange="[0.4.0.20160623-0336,0.4.0.20160623-0336]"
-          greedy="false"/>
-      <requirement
-          name="com.codeaffine.eclipse.ui.swt.theme.feature.feature.group"
-          versionRange="[0.4.0.20160623-0336,0.4.0.20160623-0336]"
-          greedy="false"/>
-      <repositoryList
-          name="Code Affine Theme">
-        <repository
-            url="http://fappel.github.io/xiliary/"/>
-      </repositoryList>
-    </targlet>
-    <targlet
         name="Slizaa Thirdparty"
         activeRepositoryList="Slizaa Thirdparty">
       <requirement

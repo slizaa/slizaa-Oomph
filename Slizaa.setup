@@ -60,6 +60,18 @@
     </setupTask>
     <setupTask
         xsi:type="setup.p2:P2Task"
+        label="Spies">
+      <requirement
+          name="org.eclipse.swt.tools.feature.feature.group"/>
+      <requirement
+          name="org.eclipse.e4.tools.spies.feature.feature.group"/>
+      <repository
+          url="http://download.eclipse.org/eclipse/updates/4.6/"/>
+      <repository
+          url="http://download.eclipse.org/e4/snapshots/org.eclipse.e4.tools/latest/"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup.p2:P2Task"
         label="M2E + Tycho">
       <requirement
           name="org.sonatype.m2e.buildhelper.feature.feature.group"/>

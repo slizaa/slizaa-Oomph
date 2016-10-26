@@ -54,6 +54,8 @@
           name="org.eclipse.oomph.setup.targlets.feature.group"/>
       <requirement
           name="org.eclipse.oomph.targlets.feature.group"/>
+      <requirement
+          name="org.eclipse.e4.core.tools.feature.feature.group"/>          
       <repository
           url="http://download.eclipse.org/releases/neon"/>
       <description>Install the tools needed in the IDE to work with the source code for ${scope.project.label}</description>

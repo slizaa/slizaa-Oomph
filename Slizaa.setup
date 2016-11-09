@@ -53,7 +53,7 @@
       <requirement
           name="org.eclipse.oomph.setup.targlets.feature.group"/>
       <requirement
-          name="org.eclipse.oomph.targlets.feature.group"/>      
+          name="org.eclipse.oomph.targlets.feature.group"/>
       <repository
           url="http://download.eclipse.org/releases/neon"/>
       <description>Install the tools needed in the IDE to work with the source code for ${scope.project.label}</description>
@@ -295,6 +295,8 @@
           name="org.eclipse.draw2d.sdk.feature.group"/>
       <requirement
           name="org.eclipse.sdk.ide"/>
+      <requirement
+          name="org.eclipse.equinox.p2.discovery.feature"/>
       <repositoryList
           name="None"/>
       <repositoryList

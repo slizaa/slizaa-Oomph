@@ -296,7 +296,7 @@
       <requirement
           name="org.eclipse.sdk.ide"/>
       <requirement
-          name="org.eclipse.equinox.p2.discovery.feature"/>
+          name="org.eclipse.equinox.p2.discovery.feature.feature.group"/>
       <repositoryList
           name="None"/>
       <repositoryList

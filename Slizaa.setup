@@ -415,9 +415,6 @@
     </targlet>
   </setupTask>
   <setupTask
-      xsi:type="projects:ProjectsBuildTask"
-      refresh="true"/>
-  <setupTask
       xsi:type="setup:CompoundTask"
       name="Build Xtext">
     <setupTask
@@ -428,6 +425,9 @@
       <description>Domain Model DSL Grammar Workflow</description>
     </setupTask>
   </setupTask>
+  <setupTask
+      xsi:type="projects:ProjectsBuildTask"
+      refresh="true"/>
   <stream name="master"
       label="Master"/>
   <logicalProjectContainer

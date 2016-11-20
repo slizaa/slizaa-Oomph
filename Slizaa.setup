@@ -434,6 +434,9 @@
         xsi:type="projects:ProjectsBuildTask"
         refresh="true"
         clean="true">
+      <predicate
+          xsi:type="predicates:NamePredicate"
+          pattern="org\.slizaa\.neo4j\.opencypher.*"/>
       <description></description>
     </setupTask>
   </setupTask>

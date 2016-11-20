@@ -418,26 +418,11 @@
       xsi:type="setup:CompoundTask"
       name="Build Xtext">
     <setupTask
-        xsi:type="projects:ProjectsBuildTask"
-        refresh="true"
-        clean="true">
-      <description></description>
-    </setupTask>
-    <setupTask
         xsi:type="launching:LaunchTask"
         id="GenerateOpenCypher.mwe2"
         filter=""
         launcher="GenerateOpenCypher.mwe2">
       <description>Domain Model DSL Grammar Workflow</description>
-    </setupTask>
-    <setupTask
-        xsi:type="projects:ProjectsBuildTask"
-        refresh="true"
-        clean="true">
-      <predicate
-          xsi:type="predicates:NamePredicate"
-          pattern="org\.slizaa\.neo4j\.opencypher.*"/>
-      <description></description>
     </setupTask>
   </setupTask>
   <stream name="master"

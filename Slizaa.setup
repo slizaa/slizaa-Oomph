@@ -424,10 +424,13 @@
         launcher="GenerateOpenCypher.mwe2">
       <description>Domain Model DSL Grammar Workflow</description>
     </setupTask>
+    <setupTask
+        xsi:type="projects:ProjectsBuildTask"
+        refresh="true"
+        clean="true">
+      <description></description>
+    </setupTask>
   </setupTask>
-  <setupTask
-      xsi:type="projects:ProjectsBuildTask"
-      refresh="true"/>
   <stream name="master"
       label="Master"/>
   <logicalProjectContainer

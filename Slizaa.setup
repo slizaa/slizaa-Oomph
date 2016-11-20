@@ -418,6 +418,12 @@
       xsi:type="setup:CompoundTask"
       name="Build Xtext">
     <setupTask
+        xsi:type="projects:ProjectsBuildTask"
+        refresh="true"
+        clean="true">
+      <description></description>
+    </setupTask>
+    <setupTask
         xsi:type="launching:LaunchTask"
         id="GenerateOpenCypher.mwe2"
         filter=""

@@ -174,7 +174,7 @@
             xsi:type="predicates:AndPredicate">
           <operand
               xsi:type="predicates:NamePredicate"
-              pattern="org.slizaa.neo4j.opencypher*"/>
+              pattern="org\.slizaa\.neo4j\.opencypher.*"/>
         </predicate>
       </workingSet>
       <workingSet

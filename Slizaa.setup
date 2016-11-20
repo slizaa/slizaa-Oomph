@@ -420,9 +420,54 @@
     <setupTask
         xsi:type="launching:LaunchTask"
         id="GenerateOpenCypher.mwe2"
+        successor="BuildOpenCypher"
         filter=""
         launcher="GenerateOpenCypher.mwe2">
       <description>Domain Model DSL Grammar Workflow</description>
+    </setupTask>
+    <setupTask
+        xsi:type="projects:ProjectsBuildTask"
+        id="BuildOpenCypher"
+        refresh="true"
+        clean="true">
+      <predicate
+          xsi:type="predicates:NamePredicate"
+          pattern="org\.slizaa\.neo4j\.opencypher.*"/>
+      <description>Build OpenCypher</description>
+    </setupTask>
+    <setupTask
+        xsi:type="launching:LaunchTask"
+        id="GenerateDbAdapterDsl.mwe2"
+        successor="BuildOpenCypher"
+        filter=""
+        launcher="GenerateDbAdapterDsl.mwe2">
+      <description>DbAdapter DSL Grammar Workflow</description>
+    </setupTask>
+    <setupTask
+        xsi:type="projects:ProjectsBuildTask"
+        id="BuildDbAdapterDsl"
+        refresh="true"
+        clean="true">
+      <predicate
+          xsi:type="predicates:NamePredicate"
+          pattern="org\.slizaa\.neo4j\.dbadapter.*"/>
+    </setupTask>
+    <setupTask
+        xsi:type="launching:LaunchTask"
+        id="GenerateMappingDsl.mwe2"
+        filter=""
+        successor="BuildMappingDsl"
+        launcher="GenerateMappingDsl.mwe2">
+      <description>Mapping DSL Grammar Workflow</description>
+    </setupTask>
+    <setupTask
+        xsi:type="projects:ProjectsBuildTask"
+        id="BuildMappingDsl"
+        refresh="true"
+        clean="true">
+      <predicate
+          xsi:type="predicates:NamePredicate"
+          pattern="org\.slizaa\.neo4j\.hierarchicalgraph\.mappingdsl.*"/>
     </setupTask>
   </setupTask>
   <stream name="master"

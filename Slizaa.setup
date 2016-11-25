@@ -188,12 +188,21 @@
         </predicate>
       </workingSet>
       <workingSet
+          name="slizaa-neo4j-dsl">
+        <predicate
+            xsi:type="predicates:AndPredicate">
+          <operand
+              xsi:type="predicates:LocationPredicate"
+              pattern=".*/02-org.slizaa.neo4j.dsl/.*"/>
+        </predicate>
+      </workingSet>
+      <workingSet
           name="slizaa-neo4j">
         <predicate
             xsi:type="predicates:AndPredicate">
           <operand
               xsi:type="predicates:LocationPredicate"
-              pattern=".*/02-org.slizaa.neo4j/.*"/>
+              pattern=".*/03-org.slizaa.neo4j/.*"/>
         </predicate>
       </workingSet>
       <workingSet
@@ -202,7 +211,7 @@
             xsi:type="predicates:AndPredicate">
           <operand
               xsi:type="predicates:LocationPredicate"
-              pattern=".*/03-org.slizaa.neo4j.jqassistant/.*"/>
+              pattern=".*/04-org.slizaa.neo4j.jqassistant/.*"/>
         </predicate>
       </workingSet>
     </setupTask>
@@ -455,8 +464,8 @@
     <setupTask
         xsi:type="launching:LaunchTask"
         id="GenerateMappingDsl.mwe2"
-        filter=""
         successor="BuildMappingDsl"
+        filter=""
         launcher="GenerateMappingDsl.mwe2">
       <description>Mapping DSL Grammar Workflow</description>
     </setupTask>
@@ -467,7 +476,7 @@
         clean="true">
       <predicate
           xsi:type="predicates:NamePredicate"
-          pattern="org\.slizaa\.neo4j\.hierarchicalgraph\.mappingdsl.*"/>
+          pattern="org\.slizaa\.neo4j\.hierarchicalgraph\.mapping\.dsl.*"/>
     </setupTask>
   </setupTask>
   <stream name="master"

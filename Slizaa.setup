@@ -211,7 +211,7 @@
             xsi:type="predicates:AndPredicate">
           <operand
               xsi:type="predicates:LocationPredicate"
-              pattern=".*/04-org.slizaa.neo4j.jqassistant/.*"/>
+              pattern=".*/04-org.slizaa.jqassistant/.*"/>
         </predicate>
       </workingSet>
     </setupTask>

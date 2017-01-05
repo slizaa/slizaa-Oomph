@@ -324,7 +324,11 @@
           locateNestedProjects="true"/>
       <sourceLocator
           rootFolder="${git.clone.slizaa-jqassistant-distribution.location}"
-          locateNestedProjects="true"/>
+          locateNestedProjects="true">
+        <predicate
+            xsi:type="predicates:LocationPredicate"
+            pattern=".*/slizaa-jqassistant-distribution/org.slizaa.org.jqassistant.distribution"/>
+      </sourceLocator>
     </setupTask>
   </setupTask>
   <setupTask
@@ -510,6 +514,17 @@
       <predicate
           xsi:type="predicates:NamePredicate"
           pattern="org\.slizaa\.neo4j\.hierarchicalgraph\.mapping\.dsl.*"/>
+    </setupTask>
+  </setupTask>
+  <setupTask
+      xsi:type="setup:CompoundTask"
+      name="Build jQAssistant distribution">
+    <setupTask
+        xsi:type="launching:LaunchTask"
+        id="build-jqassistant-distribution"
+        filter=""
+        launcher="build-jqassistant-distribution">
+      <description>build-jqassistant-distribution</description>
     </setupTask>
   </setupTask>
   <stream name="master"

@@ -403,11 +403,9 @@
     <targlet
         name="Jeeeyul's Themes">
       <requirement
-          name="net.jeeeyul.eclipse.themes.feature.feature.group"
-          versionRange="[2.3.0.I20151022-090442,2.3.0.I20151022-090442]"/>
+          name="net.jeeeyul.eclipse.themes.feature.feature.group"/>
       <requirement
-          name="net.jeeeyul.swtend.feature.feature.group"
-          versionRange="[2.2.5.I20140918-144458,2.2.5.I20140918-144458]"/>
+          name="net.jeeeyul.swtend.feature.feature.group"/>
       <repositoryList
           name="Jeeyul's Themes">
         <repository

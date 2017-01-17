@@ -129,6 +129,16 @@
       <repository
           url="http://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-buildhelper/0.15.0/N/0.15.0.201207090124/"/>
     </setupTask>
+    <setupTask
+        xsi:type="setup.p2:P2Task"
+        label="jeeeyul">
+      <requirement
+          name="net.jeeeyul.eclipse.themes.feature.feature.group"/>
+      <requirement
+          name="net.jeeeyul.swtend.feature.feature.group"/>
+      <repository
+          url="http://eclipse.jeeeyul.net/update/"/>
+    </setupTask>
   </setupTask>
   <setupTask
       xsi:type="setup:CompoundTask"

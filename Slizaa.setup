@@ -346,6 +346,37 @@
     <targlet
         name="Eclipse Platform"
         activeRepositoryList="${eclipse.target.platform}">
+      <annotation
+          source="http:/www.eclipse.org/oomph/targlets/TargetDefinitionGenerator">
+        <detail
+            key="location">
+          <value>${git.clone.slizaa.location}/_target/org.slizaa.target.target-gen</value>
+        </detail>
+        <detail
+            key="extraUnits">
+          <value>org.eclipse.equinox.executable.feature.group</value>
+        </detail>
+        <detail
+            key="includeAllPlatforms">
+          <value>false</value>
+        </detail>
+        <detail
+            key="includeSource">
+          <value>true</value>
+        </detail>
+        <detail
+            key="generateVersions">
+          <value>true</value>
+        </detail>
+        <detail
+            key="generateImplicitUnits">
+          <value>false</value>
+        </detail>
+        <detail
+            key="includeConfigurePhase">
+          <value>false</value>
+        </detail>
+      </annotation>        
       <requirement
           name="org.eclipse.emf.ecore.feature.group"/>
       <requirement

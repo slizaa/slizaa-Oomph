@@ -136,7 +136,7 @@
           name="org.eclipse.swtbot.ide.feature.group"/>
       <repository
           url="http://download.eclipse.org/technology/swtbot/releases/latest/"/>
-    </setupTask>    
+    </setupTask>
     <setupTask
         xsi:type="setup.p2:P2Task"
         label="jeeeyul">
@@ -384,7 +384,7 @@
             key="includeConfigurePhase">
           <value>false</value>
         </detail>
-      </annotation>        
+      </annotation>
       <requirement
           name="org.eclipse.emf.ecore.feature.group"/>
       <requirement
@@ -465,8 +465,7 @@
         name="Slizaa Thirdparty"
         activeRepositoryList="Slizaa Thirdparty">
       <requirement
-          name="org.slizaa.thirdparty.feature.feature.group"
-          greedy="false"/>
+          name="org.slizaa.thirdparty.feature.feature.group"/>
       <requirement
           name="org.slizaa.thirdparty.test.feature.feature.group"/>
       <repositoryList

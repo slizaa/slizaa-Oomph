@@ -131,6 +131,14 @@
     </setupTask>
     <setupTask
         xsi:type="setup.p2:P2Task"
+        label="SwtBot">
+      <requirement
+          name="org.eclipse.swtbot.ide.feature.group"/>
+      <repository
+          url="http://download.eclipse.org/technology/swtbot/releases/latest/"/>
+    </setupTask>    
+    <setupTask
+        xsi:type="setup.p2:P2Task"
         label="jeeeyul">
       <requirement
           name="net.jeeeyul.eclipse.themes.feature.feature.group"/>
@@ -465,6 +473,19 @@
           name="Slizaa Thirdparty">
         <repository
             url="http://www.slizaa.org/p2/org.slizaa.thirdparty/"/>
+      </repositoryList>
+    </targlet>
+    <targlet
+        name="SwtBot"
+        activeRepositoryList="SwtBot">
+      <requirement
+          name="org.eclipse.swtbot.feature.group"/>
+      <requirement
+          name="org.eclipse.swtbot.eclipse.feature.group"/>
+      <repositoryList
+          name="SwtBot">
+        <repository
+            url="http://download.eclipse.org/technology/swtbot/releases/latest/"/>
       </repositoryList>
     </targlet>
   </setupTask>

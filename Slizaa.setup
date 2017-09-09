@@ -400,7 +400,7 @@
       <requirement
           name="org.eclipse.elk.feature.feature.group"/>
       <requirement
-          name="org.eclipse.elk.graphiti.feature.group"/>
+          name="org.eclipse.elk.graphiti.feature.feature.group"/>
       <repositoryList
           name="Eclipse Layout Kernel 0.2.2">
         <repository

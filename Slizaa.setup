@@ -102,7 +102,7 @@
       <requirement
           name="org.eclipse.oomph.targlets.feature.group"/>
       <repository
-          url="http://download.eclipse.org/releases/neon"/>
+          url="http://download.eclipse.org/releases/oxygen"/>
       <description>Install the tools needed in the IDE to work with the source code for ${scope.project.label}</description>
     </setupTask>
     <setupTask
@@ -113,7 +113,7 @@
       <requirement
           name="org.eclipse.e4.tools.spies.feature.feature.group"/>
       <repository
-          url="http://download.eclipse.org/eclipse/updates/4.6/"/>
+          url="http://download.eclipse.org/eclipse/updates/4.7/"/>
       <repository
           url="http://download.eclipse.org/e4/snapshots/org.eclipse.e4.tools/latest/"/>
     </setupTask>
@@ -179,7 +179,7 @@
     <setupTask
         xsi:type="setup:VariableTask"
         name="eclipse.target.platform"
-        defaultValue="Neon"
+        defaultValue="Oxygen"
         storageURI="scope://Workspace"/>
   </setupTask>
   <setupTask
@@ -239,24 +239,6 @@
           <operand
               xsi:type="predicates:LocationPredicate"
               pattern=".*/03-org.slizaa.neo4j/.*"/>
-        </predicate>
-      </workingSet>
-      <workingSet
-          name="slizaa-jqassistant">
-        <predicate
-            xsi:type="predicates:AndPredicate">
-          <operand
-              xsi:type="predicates:LocationPredicate"
-              pattern=".*/04-org.slizaa.jqassistant/.*"/>
-        </predicate>
-      </workingSet>
-      <workingSet
-          name="slizaa-jqassistant-distribution">
-        <predicate
-            xsi:type="predicates:AndPredicate">
-          <operand
-              xsi:type="predicates:LocationPredicate"
-              pattern=".*/slizaa-jqassistant-distribution/org.slizaa.org.jqassistant.distribution"/>
         </predicate>
       </workingSet>
     </setupTask>
@@ -327,27 +309,6 @@
         </detail>
       </annotation>
       <description>slizaa-opencypher</description>
-    </setupTask>
-    <setupTask
-        xsi:type="git:GitCloneTask"
-        id="git.clone.slizaa-jqassistant-distribution"
-        remoteURI="slizaa/slizaa-jqassistant-distribution">
-      <annotation
-          source="http://www.eclipse.org/oomph/setup/InducedChoices">
-        <detail
-            key="inherit">
-          <value>github.remoteURIs</value>
-        </detail>
-        <detail
-            key="label">
-          <value>slizaa-jqassistant-distribution Github repository</value>
-        </detail>
-        <detail
-            key="target">
-          <value>remoteURI</value>
-        </detail>
-      </annotation>
-      <description>slizaa-jqassistant-distribution</description>
     </setupTask>
     <setupTask
         xsi:type="projects:ProjectsImportTask"
@@ -429,6 +390,11 @@
           name="Neon">
         <repository
             url="http://download.eclipse.org/releases/neon"/>
+      </repositoryList>
+      <repositoryList
+          name="Oxygen">
+        <repository
+            url="http://download.eclipse.org/releases/oxygen"/>
       </repositoryList>
     </targlet>
     <targlet
@@ -560,17 +526,6 @@
       <predicate
           xsi:type="predicates:NamePredicate"
           pattern="org\.slizaa\.neo4j\.hierarchicalgraph\.mapping\.dsl.*"/>
-    </setupTask>
-  </setupTask>
-  <setupTask
-      xsi:type="setup:CompoundTask"
-      name="Build jQAssistant distribution">
-    <setupTask
-        xsi:type="launching:LaunchTask"
-        id="build-jqassistant-distribution"
-        filter=""
-        launcher="build-jqassistant-distribution">
-      <description>build-jqassistant-distribution</description>
     </setupTask>
   </setupTask>
   <stream name="master"

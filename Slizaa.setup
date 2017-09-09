@@ -323,16 +323,6 @@
       <description>slizaa-opencypher</description>
     </setupTask>
     <setupTask
-        xsi:type="projects:ProjectsImportTask"
-        id="Slizaa-Projects">
-      <sourceLocator
-          rootFolder="${git.clone.slizaa.location}"
-          locateNestedProjects="true"/>
-      <sourceLocator
-          rootFolder="${git.clone.slizaaopencypher.location}"
-          locateNestedProjects="true"/>
-    </setupTask>
-    <setupTask
         xsi:type="git:GitCloneTask"
         id="git.clone.slizaa-scanner"
         remoteURI="slizaa/slizaa-scanner">
@@ -367,6 +357,19 @@
         </detail>
       </annotation>
       <description>slizaa-scanner</description>
+    </setupTask>
+    <setupTask
+        xsi:type="projects:ProjectsImportTask"
+        id="Slizaa-Projects">
+      <sourceLocator
+          rootFolder="${git.clone.slizaa.location}"
+          locateNestedProjects="true"/>
+      <sourceLocator
+          rootFolder="${git.clone.slizaaopencypher.location}"
+          locateNestedProjects="true"/>
+      <sourceLocator
+          rootFolder="${git.clone.slizaa-scanner}"
+          locateNestedProjects="true"/>
     </setupTask>
   </setupTask>
   <setupTask

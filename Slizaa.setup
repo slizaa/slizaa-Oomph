@@ -319,13 +319,6 @@
       <sourceLocator
           rootFolder="${git.clone.slizaaopencypher.location}"
           locateNestedProjects="true"/>
-      <sourceLocator
-          rootFolder="${git.clone.slizaa-jqassistant-distribution.location}"
-          locateNestedProjects="true">
-        <predicate
-            xsi:type="predicates:LocationPredicate"
-            pattern=".*/slizaa-jqassistant-distribution/org.slizaa.org.jqassistant.distribution"/>
-      </sourceLocator>
     </setupTask>
   </setupTask>
   <setupTask

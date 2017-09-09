@@ -197,6 +197,18 @@
         </predicate>
       </workingSet>
       <workingSet
+          name="slizaa-scanner">
+        <predicate
+            xsi:type="predicates:OrPredicate">
+          <operand
+              xsi:type="predicates:NamePredicate"
+              pattern="org\.slizaa\.scanner.*"/>
+          <operand
+              xsi:type="predicates:NamePredicate"
+              pattern="slizaa-scanner"/>
+        </predicate>
+      </workingSet>
+      <workingSet
           name="slizaa-core">
         <predicate
             xsi:type="predicates:AndPredicate">
@@ -320,6 +332,42 @@
           rootFolder="${git.clone.slizaaopencypher.location}"
           locateNestedProjects="true"/>
     </setupTask>
+    <setupTask
+        xsi:type="git:GitCloneTask"
+        id="git.clone.slizaa-scanner"
+        remoteURI="slizaa/slizaa-scanner">
+      <annotation
+          source="http://www.eclipse.org/oomph/setup/InducedChoices">
+        <annotation
+            source="http://www.eclipse.org/oomph/setup/InducedChoices">
+          <detail
+              key="inherit">
+            <value>github.remoteURIs</value>
+          </detail>
+          <detail
+              key="label">
+            <value>slizaa-scanner Github repository</value>
+          </detail>
+          <detail
+              key="target">
+            <value>remoteURI</value>
+          </detail>
+        </annotation>
+        <detail
+            key="inherit">
+          <value>github.remoteURIs</value>
+        </detail>
+        <detail
+            key="label">
+          <value>slizaa-scanner Github repository</value>
+        </detail>
+        <detail
+            key="target">
+          <value>remoteURI</value>
+        </detail>
+      </annotation>
+      <description>slizaa-scanner</description>
+    </setupTask>
   </setupTask>
   <setupTask
       xsi:type="setup.targlets:TargletTask">
@@ -407,7 +455,7 @@
             url="http://download.eclipse.org/elk/updates/releases/0.2.2/"/>
       </repositoryList>
     </targlet>
-	<targlet
+    <targlet
         name="Kieler Pragmatics"
         activeRepositoryList="Kieler Pragmatics 2017-02-04">
       <requirement
@@ -425,7 +473,7 @@
         <repository
             url="http://rtsys.informatik.uni-kiel.de/~kieler/updatesite/release_pragmatics_2017-02-04/"/>
       </repositoryList>
-    </targlet>    
+    </targlet>
     <targlet
         name="Jeeeyul's Themes">
       <requirement

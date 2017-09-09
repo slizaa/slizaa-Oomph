@@ -407,6 +407,25 @@
             url="http://download.eclipse.org/elk/updates/releases/0.2.2/"/>
       </repositoryList>
     </targlet>
+	<targlet
+        name="Kieler Pragmatics"
+        activeRepositoryList="Kieler Pragmatics 2017-02-04">
+      <requirement
+          name="de.cau.cs.kieler.klighd.draw2d.feature.feature.group"/>
+      <requirement
+          name="de.cau.cs.kieler.klighd.sdk.feature.feature.group"/>
+      <requirement
+          name="de.cau.cs.kieler.klighd.freehep.feature.feature.group"/>
+      <requirement
+          name="de.cau.cs.kieler.klighd.view.feature.feature.group"/>
+      <requirement
+          name="de.cau.cs.kieler.klighd.feature.feature.group"/>
+      <repositoryList
+          name="Kieler Pragmatics 2017-02-04">
+        <repository
+            url="http://rtsys.informatik.uni-kiel.de/~kieler/updatesite/release_pragmatics_2017-02-04/"/>
+      </repositoryList>
+    </targlet>    
     <targlet
         name="Jeeeyul's Themes">
       <requirement

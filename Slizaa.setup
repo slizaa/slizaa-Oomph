@@ -201,8 +201,14 @@
         <predicate
             xsi:type="predicates:OrPredicate">
           <operand
-              xsi:type="predicates:NamePredicate"
-              pattern="org\.slizaa\.scanner.*"/>
+              xsi:type="predicates:AndPredicate">
+            <operand
+                xsi:type="predicates:NamePredicate"
+                pattern="org\.slizaa\.scanner.*"/>
+            <operand
+                xsi:type="predicates:NaturePredicate"
+                nature="org.eclipse.jdt.core.javanature"/>
+          </operand>
           <operand
               xsi:type="predicates:NamePredicate"
               pattern="slizaa-scanner"/>

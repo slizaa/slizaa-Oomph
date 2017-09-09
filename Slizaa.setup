@@ -125,9 +125,9 @@
       <requirement
           name="org.sonatype.tycho.m2e.feature.feature.group"/>
       <repository
-          url="http://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-tycho/0.8.0/N/0.8.0.201409231215/"/>
+          url="http://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-tycho/0.9.0/N/0.9.0.201609252021/"/>
       <repository
-          url="http://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-buildhelper/0.15.0/N/0.15.0.201207090124/"/>
+          url="http://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-buildhelper/0.15.0/N/0.15.0.201405280027/"/>
     </setupTask>
     <setupTask
         xsi:type="setup.p2:P2Task"
@@ -402,9 +402,9 @@
       <requirement
           name="org.eclipse.elk.feature.feature.group"/>
       <repositoryList
-          name="Eclipse Layout Kernel 0.1.0">
+          name="Eclipse Layout Kernel 0.2.2">
         <repository
-            url="http://download.eclipse.org/elk/updates/releases/0.1.0/"/>
+            url="http://download.eclipse.org/elk/updates/releases/0.2.2/"/>
       </repositoryList>
     </targlet>
     <targlet
@@ -421,9 +421,9 @@
       <requirement
           name="de.cau.cs.kieler.klighd.feature.feature.group"/>
       <repositoryList
-          name="Kieler Pragmatics 2016-07">
+          name="Kieler Pragmatics 2017-02-04">
         <repository
-            url="http://rtsys.informatik.uni-kiel.de/~kieler/updatesite/release_pragmatics_2016-07/"/>
+            url="http://rtsys.informatik.uni-kiel.de/~kieler/updatesite/release_pragmatics_2017-02-04/"/>
       </repositoryList>
     </targlet>
     <targlet

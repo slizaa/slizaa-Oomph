@@ -495,23 +495,6 @@
     </setupTask>
     <setupTask
         xsi:type="launching:LaunchTask"
-        id="GenerateDbAdapterDsl.mwe2"
-        successor="BuildOpenCypher"
-        filter=""
-        launcher="GenerateDbAdapterDsl.mwe2">
-      <description>DbAdapter DSL Grammar Workflow</description>
-    </setupTask>
-    <setupTask
-        xsi:type="projects:ProjectsBuildTask"
-        id="BuildDbAdapterDsl"
-        refresh="true"
-        clean="true">
-      <predicate
-          xsi:type="predicates:NamePredicate"
-          pattern="org\.slizaa\.neo4j\.dbadapter.*"/>
-    </setupTask>
-    <setupTask
-        xsi:type="launching:LaunchTask"
         id="GenerateMappingDsl.mwe2"
         successor="BuildMappingDsl"
         filter=""

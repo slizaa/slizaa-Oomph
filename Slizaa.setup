@@ -368,7 +368,7 @@
           rootFolder="${git.clone.slizaaopencypher.location}"
           locateNestedProjects="true"/>
       <sourceLocator
-          rootFolder="${git.clone.slizaa-scanner}"
+          rootFolder="${git.clone.slizaa-scanner.location}"
           locateNestedProjects="true"/>
     </setupTask>
   </setupTask>

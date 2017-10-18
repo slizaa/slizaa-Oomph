@@ -251,7 +251,7 @@
           <value>remoteURI</value>
         </detail>
       </annotation>
-      <description>${scope.project.label}</description>
+      <description>slizaaopencypher</description>
     </setupTask>
     <setupTask
         xsi:type="projects:ProjectsImportTask">

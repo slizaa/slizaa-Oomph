@@ -526,6 +526,17 @@
             url="http://www.slizaa.org/p2/org.slizaa.scanner.jtype"/>
       </repositoryList>
     </targlet>
+    <targlet
+        name="org.slizaa.neo4j.opencypher"
+        activeRepositoryList="">
+      <requirement
+          name="org.slizaa.neo4j.opencypher.feature.feature.group"/>
+      <repositoryList
+          name="org.slizaa.neo4j.opencypher">
+        <repository
+            url="http://www.slizaa.org/p2/org.slizaa.neo4j.opencypher"/>
+      </repositoryList>
+    </targlet>
   </setupTask>
   <setupTask
       xsi:type="setup:CompoundTask"

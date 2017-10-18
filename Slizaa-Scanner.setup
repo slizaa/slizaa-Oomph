@@ -244,13 +244,52 @@
         id="Slizaa-Projects">
       <sourceLocator
           rootFolder="${git.clone.slizaa-neo4j.location}"
-          locateNestedProjects="true"/>
+          locateNestedProjects="true">
+        <predicate
+            xsi:type="predicates:NotPredicate">
+          <operand
+              xsi:type="predicates:OrPredicate">
+            <operand
+                xsi:type="predicates:NamePredicate"
+                pattern="*.feature"/>
+            <operand
+                xsi:type="predicates:NamePredicate"
+                pattern="*repository"/>
+          </operand>
+        </predicate>
+      </sourceLocator>
       <sourceLocator
           rootFolder="${git.clone.slizaa-core.location}"
-          locateNestedProjects="true"/>
+          locateNestedProjects="true">
+        <predicate
+            xsi:type="predicates:NotPredicate">
+          <operand
+              xsi:type="predicates:OrPredicate">
+            <operand
+                xsi:type="predicates:NamePredicate"
+                pattern="*.feature"/>
+            <operand
+                xsi:type="predicates:NamePredicate"
+                pattern="*repository"/>
+          </operand>
+        </predicate>
+      </sourceLocator>
       <sourceLocator
           rootFolder="${git.clone.slizaa-jtype.location}"
-          locateNestedProjects="true"/>
+          locateNestedProjects="true">
+        <predicate
+            xsi:type="predicates:NotPredicate">
+          <operand
+              xsi:type="predicates:OrPredicate">
+            <operand
+                xsi:type="predicates:NamePredicate"
+                pattern="*.feature"/>
+            <operand
+                xsi:type="predicates:NamePredicate"
+                pattern="*repository"/>
+          </operand>
+        </predicate>
+      </sourceLocator>
     </setupTask>
   </setupTask>
   <stream name="master"

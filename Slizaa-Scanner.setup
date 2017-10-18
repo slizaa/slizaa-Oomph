@@ -188,16 +188,30 @@
       <workingSet
           name="slizaa-scanner-core">
         <predicate
-            xsi:type="predicates:RepositoryPredicate"
-            project="slizaa-scanner-core"/>
-        <predicate
             xsi:type="predicates:NamePredicate"
             pattern="slizaa-scanner-core"/>
+        <predicate
+            xsi:type="predicates:LocationPredicate"
+            pattern=".*/slizaa-scanner-core/.*"/>
       </workingSet>
       <workingSet
-          name="slizaa-scanner-neo4j"/>
+          name="slizaa-scanner-neo4j">
+        <predicate
+            xsi:type="predicates:NamePredicate"
+            pattern="slizaa-scanner-neo4j"/>
+        <predicate
+            xsi:type="predicates:LocationPredicate"
+            pattern=".*/slizaa-scanner-neo4j/.*"/>
+      </workingSet>
       <workingSet
-          name="slizaa-scanner-jtype"/>
+          name="slizaa-scanner-jtype">
+        <predicate
+            xsi:type="predicates:NamePredicate"
+            pattern="slizaa-scanner-jtype"/>
+        <predicate
+            xsi:type="predicates:LocationPredicate"
+            pattern=".*/slizaa-scanner-jtype/.*"/>
+      </workingSet>
     </setupTask>
     <description></description>
   </setupTask>
@@ -212,10 +226,30 @@
       <description>slizaa-core</description>
     </setupTask>
     <setupTask
+        xsi:type="git:GitCloneTask"
+        id="git.clone.slizaa-neo4j"
+        remoteURI="https://github.com/slizaa/slizaa-scanner-neo4j"
+        pushURI="">
+      <description>slizaa-neo4j</description>
+    </setupTask>
+    <setupTask
+        xsi:type="git:GitCloneTask"
+        id="git.clone.slizaa-jtype"
+        remoteURI="https://github.com/slizaa/slizaa-scanner-jtype"
+        pushURI="">
+      <description>slizaa-jtype</description>
+    </setupTask>
+    <setupTask
         xsi:type="projects:ProjectsImportTask"
         id="Slizaa-Projects">
       <sourceLocator
+          rootFolder="${git.clone.slizaa-neo4j.location}"
+          locateNestedProjects="true"/>
+      <sourceLocator
           rootFolder="${git.clone.slizaa-core.location}"
+          locateNestedProjects="true"/>
+      <sourceLocator
+          rootFolder="${git.clone.slizaa-jtype.location}"
           locateNestedProjects="true"/>
     </setupTask>
   </setupTask>

@@ -145,6 +145,14 @@
       <repository
           url="http://eclipse.jeeeyul.net/update/"/>
     </setupTask>
+    <setupTask
+        xsi:type="setup.p2:P2Task"
+        label="Copyright Wizard">
+      <requirement
+          name="com.wdev91.eclipse.copyright.feature.feature.group"/>
+      <repository
+          url="https://dl.bintray.com/jmini/Eclipse-Copyright-Generator"/>
+    </setupTask>
   </setupTask>
   <setupTask
       xsi:type="setup:CompoundTask"
@@ -244,52 +252,13 @@
         id="Slizaa-Projects">
       <sourceLocator
           rootFolder="${git.clone.slizaa-neo4j.location}"
-          locateNestedProjects="true">
-        <predicate
-            xsi:type="predicates:NotPredicate">
-          <operand
-              xsi:type="predicates:OrPredicate">
-            <operand
-                xsi:type="predicates:NamePredicate"
-                pattern="*.feature"/>
-            <operand
-                xsi:type="predicates:NamePredicate"
-                pattern="*repository"/>
-          </operand>
-        </predicate>
-      </sourceLocator>
+          locateNestedProjects="true"/>
       <sourceLocator
           rootFolder="${git.clone.slizaa-core.location}"
-          locateNestedProjects="true">
-        <predicate
-            xsi:type="predicates:NotPredicate">
-          <operand
-              xsi:type="predicates:OrPredicate">
-            <operand
-                xsi:type="predicates:NamePredicate"
-                pattern="*.feature"/>
-            <operand
-                xsi:type="predicates:NamePredicate"
-                pattern="*repository"/>
-          </operand>
-        </predicate>
-      </sourceLocator>
+          locateNestedProjects="true"/>
       <sourceLocator
           rootFolder="${git.clone.slizaa-jtype.location}"
-          locateNestedProjects="true">
-        <predicate
-            xsi:type="predicates:NotPredicate">
-          <operand
-              xsi:type="predicates:OrPredicate">
-            <operand
-                xsi:type="predicates:NamePredicate"
-                pattern="*.feature"/>
-            <operand
-                xsi:type="predicates:NamePredicate"
-                pattern="*repository"/>
-          </operand>
-        </predicate>
-      </sourceLocator>
+          locateNestedProjects="true"/>
     </setupTask>
   </setupTask>
   <stream name="master"

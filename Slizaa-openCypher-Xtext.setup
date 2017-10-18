@@ -265,41 +265,8 @@
     <targlet
         name="Eclipse Platform"
         activeRepositoryList="${eclipse.target.platform}">
-      <annotation
-          source="http:/www.eclipse.org/oomph/targlets/TargetDefinitionGenerator">
-        <detail
-            key="location">
-          <value>${git.clone.slizaa.location}/_target/org.slizaa.target.target-gen</value>
-        </detail>
-        <detail
-            key="extraUnits">
-          <value>org.eclipse.equinox.executable.feature.group</value>
-        </detail>
-        <detail
-            key="includeAllPlatforms">
-          <value>false</value>
-        </detail>
-        <detail
-            key="includeSource">
-          <value>true</value>
-        </detail>
-        <detail
-            key="generateVersions">
-          <value>true</value>
-        </detail>
-        <detail
-            key="generateImplicitUnits">
-          <value>false</value>
-        </detail>
-        <detail
-            key="includeConfigurePhase">
-          <value>false</value>
-        </detail>
-      </annotation>
       <requirement
           name="org.eclipse.emf.ecore.feature.group"/>
-      <requirement
-          name="org.eclipse.draw2d.source.feature.group"/>
       <requirement
           name="org.eclipse.emf.sdk.feature.group"/>
       <requirement
@@ -309,72 +276,15 @@
       <requirement
           name="org.eclipse.equinox.compendium.sdk.feature.group"/>
       <requirement
-          name="org.eclipse.draw2d.feature.group"/>
-      <requirement
-          name="org.eclipse.draw2d.sdk.feature.group"/>
-      <requirement
           name="org.eclipse.sdk.ide"/>
       <requirement
           name="org.eclipse.equinox.p2.discovery.feature.feature.group"/>
       <repositoryList
           name="None"/>
       <repositoryList
-          name="Neon">
-        <repository
-            url="http://download.eclipse.org/releases/neon"/>
-      </repositoryList>
-      <repositoryList
           name="Oxygen">
         <repository
             url="http://download.eclipse.org/releases/oxygen"/>
-      </repositoryList>
-    </targlet>
-    <targlet
-        name="Eclipse Layout Kernel"
-        activeRepositoryList="Eclipse Layout Kernel 0.2.2">
-      <requirement
-          name="org.eclipse.elk.sdk.feature.feature.group"/>
-      <requirement
-          name="org.eclipse.elk.ui.feature.feature.group"/>
-      <requirement
-          name="org.eclipse.elk.feature.feature.group"/>
-      <requirement
-          name="org.eclipse.elk.graphiti.feature.feature.group"/>
-      <repositoryList
-          name="Eclipse Layout Kernel 0.2.2">
-        <repository
-            url="http://download.eclipse.org/elk/updates/releases/0.2.2/"/>
-      </repositoryList>
-    </targlet>
-    <targlet
-        name="Kieler Pragmatics"
-        activeRepositoryList="Kieler Pragmatics 2017-02-04">
-      <requirement
-          name="de.cau.cs.kieler.klighd.draw2d.feature.feature.group"/>
-      <requirement
-          name="de.cau.cs.kieler.klighd.sdk.feature.feature.group"/>
-      <requirement
-          name="de.cau.cs.kieler.klighd.freehep.feature.feature.group"/>
-      <requirement
-          name="de.cau.cs.kieler.klighd.view.feature.feature.group"/>
-      <requirement
-          name="de.cau.cs.kieler.klighd.feature.feature.group"/>
-      <repositoryList
-          name="Kieler Pragmatics 2017-02-04">
-        <repository
-            url="http://rtsys.informatik.uni-kiel.de/~kieler/updatesite/release_pragmatics_2017-02-04/"/>
-      </repositoryList>
-    </targlet>
-    <targlet
-        name="Jeeeyul's Themes">
-      <requirement
-          name="net.jeeeyul.eclipse.themes.feature.feature.group"/>
-      <requirement
-          name="net.jeeeyul.swtend.feature.feature.group"/>
-      <repositoryList
-          name="Jeeyul's Themes">
-        <repository
-            url="http://eclipse.jeeeyul.net/update/"/>
       </repositoryList>
     </targlet>
     <targlet

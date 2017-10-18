@@ -147,6 +147,14 @@
       <repository
           url="http://eclipse.jeeeyul.net/update/"/>
     </setupTask>
+    <setupTask
+        xsi:type="setup.p2:P2Task"
+        label="Copyright Wizard">
+      <requirement
+          name="com.wdev91.eclipse.copyright.feature.feature.group"/>
+      <repository
+          url="https://dl.bintray.com/jmini/Eclipse-Copyright-Generator"/>
+    </setupTask>
   </setupTask>
   <setupTask
       xsi:type="setup:CompoundTask"
@@ -187,33 +195,6 @@
       name="Working Sets">
     <setupTask
         xsi:type="setup.workingsets:WorkingSetTask">
-      <workingSet
-          name="slizaa-opencypher-xtext">
-        <predicate
-            xsi:type="predicates:AndPredicate">
-          <operand
-              xsi:type="predicates:NamePredicate"
-              pattern="org\.slizaa\.neo4j\.opencypher.*"/>
-        </predicate>
-      </workingSet>
-      <workingSet
-          name="slizaa-scanner">
-        <predicate
-            xsi:type="predicates:OrPredicate">
-          <operand
-              xsi:type="predicates:AndPredicate">
-            <operand
-                xsi:type="predicates:NamePredicate"
-                pattern="org\.slizaa\.scanner.*"/>
-            <operand
-                xsi:type="predicates:NaturePredicate"
-                nature="org.eclipse.jdt.core.javanature"/>
-          </operand>
-          <operand
-              xsi:type="predicates:NamePredicate"
-              pattern="slizaa-scanner"/>
-        </predicate>
-      </workingSet>
       <workingSet
           name="slizaa-core">
         <predicate
@@ -370,12 +351,6 @@
       <sourceLocator
           rootFolder="${git.clone.slizaa.location}"
           locateNestedProjects="true"/>
-      <sourceLocator
-          rootFolder="${git.clone.slizaaopencypher.location}"
-          locateNestedProjects="true"/>
-      <sourceLocator
-          rootFolder="${git.clone.slizaa-scanner.location}"
-          locateNestedProjects="true"/>
     </setupTask>
   </setupTask>
   <setupTask
@@ -521,28 +496,40 @@
             url="http://download.eclipse.org/technology/swtbot/releases/latest/"/>
       </repositoryList>
     </targlet>
+    <targlet
+        name="org.slizaa.scanner.core">
+      <requirement
+          name="org.slizaa.scanner.core.eclipse.feature.feature.group"/>
+      <repositoryList
+          name="org.slizaa.scanner.core">
+        <repository
+            url="http://www.slizaa.org/p2/org.slizaa.scanner.core"/>
+      </repositoryList>
+    </targlet>
+    <targlet
+        name="org.slizaa.scanner.neo4j">
+      <requirement
+          name="org.slizaa.scanner.neo4j.eclipse.feature.feature.group"/>
+      <repositoryList
+          name="org.slizaa.scanner.neo4j">
+        <repository
+            url="http://www.slizaa.org/p2/org.slizaa.scanner.neo4j"/>
+      </repositoryList>
+    </targlet>
+    <targlet
+        name="org.slizaa.scanner.jtype">
+      <requirement
+          name="org.slizaa.scanner.jtype.eclipse.feature.feature.group"/>
+      <repositoryList
+          name="org.slizaa.scanner.jtype">
+        <repository
+            url="http://www.slizaa.org/p2/org.slizaa.scanner.jtype"/>
+      </repositoryList>
+    </targlet>
   </setupTask>
   <setupTask
       xsi:type="setup:CompoundTask"
       name="Build Xtext">
-    <setupTask
-        xsi:type="launching:LaunchTask"
-        id="GenerateOpenCypher.mwe2"
-        successor="BuildOpenCypher"
-        filter=""
-        launcher="GenerateOpenCypher.mwe2">
-      <description>Domain Model DSL Grammar Workflow</description>
-    </setupTask>
-    <setupTask
-        xsi:type="projects:ProjectsBuildTask"
-        id="BuildOpenCypher"
-        refresh="true"
-        clean="true">
-      <predicate
-          xsi:type="predicates:NamePredicate"
-          pattern="org\.slizaa\.neo4j\.opencypher.*"/>
-      <description>Build OpenCypher</description>
-    </setupTask>
     <setupTask
         xsi:type="launching:LaunchTask"
         id="GenerateMappingDsl.mwe2"

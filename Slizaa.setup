@@ -249,7 +249,7 @@
     <setupTask
         xsi:type="git:GitCloneTask"
         id="git.clone.slizaa"
-        remoteURI="slizaa/slizaa">
+        remoteURI="https://github.com/slizaa/slizaa">
       <annotation
           source="http://www.eclipse.org/oomph/setup/InducedChoices">
         <detail
@@ -270,7 +270,7 @@
     <setupTask
         xsi:type="git:GitCloneTask"
         id="git.clone.slizaa-oomph"
-        remoteURI="slizaa/slizaa-oomph">
+        remoteURI="https://github.com/slizaa/slizaa-oomph">
       <annotation
           source="http://www.eclipse.org/oomph/setup/InducedChoices">
         <detail
@@ -291,7 +291,7 @@
     <setupTask
         xsi:type="git:GitCloneTask"
         id="git.clone.slizaaopencypher"
-        remoteURI="slizaa/slizaa-opencypher-xtext">
+        remoteURI="https://github.com/slizaa/slizaa-opencypher-xtext">
       <annotation
           source="http://www.eclipse.org/oomph/setup/InducedChoices">
         <detail
@@ -311,39 +311,24 @@
     </setupTask>
     <setupTask
         xsi:type="git:GitCloneTask"
-        id="git.clone.slizaa-scanner"
-        remoteURI="slizaa/slizaa-scanner">
-      <annotation
-          source="http://www.eclipse.org/oomph/setup/InducedChoices">
-        <annotation
-            source="http://www.eclipse.org/oomph/setup/InducedChoices">
-          <detail
-              key="inherit">
-            <value>github.remoteURIs</value>
-          </detail>
-          <detail
-              key="label">
-            <value>slizaa-scanner Github repository</value>
-          </detail>
-          <detail
-              key="target">
-            <value>remoteURI</value>
-          </detail>
-        </annotation>
-        <detail
-            key="inherit">
-          <value>github.remoteURIs</value>
-        </detail>
-        <detail
-            key="label">
-          <value>slizaa-scanner Github repository</value>
-        </detail>
-        <detail
-            key="target">
-          <value>remoteURI</value>
-        </detail>
-      </annotation>
-      <description>slizaa-scanner</description>
+        id="git.clone.slizaa-core"
+        remoteURI="https://github.com/slizaa/slizaa-scanner-core"
+        pushURI="">
+      <description>slizaa-core</description>
+    </setupTask>
+    <setupTask
+        xsi:type="git:GitCloneTask"
+        id="git.clone.slizaa-neo4j"
+        remoteURI="https://github.com/slizaa/slizaa-scanner-neo4j"
+        pushURI="">
+      <description>slizaa-neo4j</description>
+    </setupTask>
+    <setupTask
+        xsi:type="git:GitCloneTask"
+        id="git.clone.slizaa-jtype"
+        remoteURI="https://github.com/slizaa/slizaa-scanner-jtype"
+        pushURI="">
+      <description>slizaa-jtype</description>
     </setupTask>
     <setupTask
         xsi:type="projects:ProjectsImportTask"
